@@ -1,1 +1,48 @@
-<p>afterlogin works!</p>
+<mat-form-field class="full-width">
+  <mat-label>ID Token</mat-label>
+  <textarea matInput [(ngModel)]="idToken" name="idToken" rows="10"></textarea>
+</mat-form-field>
+
+<mat-form-field class="full-width">
+  <mat-label>ID Toke (decoded)</mat-label>
+  <textarea
+    matInput
+    [(ngModel)]="idTokenDecoded"
+    name="idTokenDecoded"
+    rows="10"
+  ></textarea>
+</mat-form-field>
+
+<mat-form-field class="full-width">
+  <mat-label>Access Token</mat-label>
+  <textarea
+    matInput
+    [(ngModel)]="accessToken"
+    name="accessToken"
+    rows="10"
+  ></textarea>
+</mat-form-field>
+
+<mat-form-field class="full-width">
+  <mat-label>Access Token (decoded)</mat-label>
+  <textarea
+    matInput
+    [(ngModel)]="accessTokenDecoded"
+    name="accessTokenDecoded"
+    rows="10"
+  ></textarea>
+</mat-form-field>
+
+<mat-form-field class="full-width">
+  <mat-label>Refresh Token</mat-label>
+  <textarea
+    matInput
+    [(ngModel)]="refreshToken"
+    name="refreshToken"
+    rows="10"
+  ></textarea>
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="refresh()">
+  Refresh Tokens
+</button>
